@@ -1,0 +1,74 @@
+.post-title{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+  
+.post-title a {
+    color: steelblue;
+    text-decoration: none;
+    margin-left: .5rem;
+}
+  
+.post-title a:last-child{
+    color: red;
+}
+  
+.post-title > div {
+    margin-left : auto;
+}
+
+.post-author{
+    margin : .5em 0 ;
+    text-align: center;
+    color: rgb(54, 50, 50);
+}
+  
+  .post-exerpt{
+    margin-bottom: 1rem;
+    color: black;
+}
+  
+.post-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.post-detail > h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.btn-detail {
+    letter-spacing: 0.4px;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    font-size: 1rem ;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+}
+
+.btn {
+    padding: 1rem;
+    border: none;
+    border-radius: .3rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+  
+.btn-submit {
+    background-color: steelblue;
+}
+
+.btn-delete {
+    background-color: indianred;
+}
+  

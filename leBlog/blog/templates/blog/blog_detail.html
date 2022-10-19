@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+    {% block title %}
+        <title>{{ post.title }}</title>
+    {% endblock %}
+
+    {% block content %}
+
+        <article>
+            <h1>{{ post.title }}</h1>
+
+                <!-- linebreaks permet de convertir les saut de ligne en format html <br> -->
+                <!-- save permet d interpretter les balises html-->
+                
+            <div>{{ post.content|linebreaks|safe }}</div>
+            
+        </article>
+
+    {% endblock %}

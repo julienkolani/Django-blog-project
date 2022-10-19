@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+    {% block title %}
+        <title>Acceuil du blog</title>
+    {% endblock %}
+
+{% block content %}
+
+        {% for post in posts %}
+
+                <article>
+                    
+                    <div class ="post-title " >
+
+                        <h2> {{ post.title }}</h2>
+
+                        
+
+                            <div>
+                                <a href="{% url 'blog:edit' slug=post.slug %}">Editer</a>
+                                <a href="{% url 'blog:delete' slug=post.slug %}">Supprimer</a>
+                            </div>
+
+                        
+
+                    </div>
+
+                    <h5 class="post-author">  Publié par : " <i>{{ post.author_or_default }}</i> "  le {{ post.created_on|date:'j F Y' }} .</h5>
+
+                    <p  class="post-execerpt">{{ post.content|safe|truncatewords:50}}</p>
+
+                    <form action="{% url 'blog:post' slug=post.slug %}">
+                        <button class="btn-detail btn-submit" type="submit"> Lire l'article.</button>
+                    </form>
+
+                </article>
+
+                <div class="pulse-anim"></div>
+                
+        {% endfor %}
+
+{% endblock %}
+
